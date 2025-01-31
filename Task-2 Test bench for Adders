@@ -1,0 +1,26 @@
+/* Test Bench for Half and Full Adders Circuits/*
+
+module tb_adders();
+    reg a, b, cin;
+    wire sum_half, carry_half, sum_full, carry_full;
+
+    // Instantiate Half Adder
+    half_adder ha (.a(a), .b(b), .sum(sum_half), .carry(carry_half));
+
+    // Instantiate Full Adder
+    full_adder fa (.a(a), .b(b), .cin(cin), .sum(sum_full), .carry(carry_full));
+
+    initial begin
+        $monitor("a=%b, b=%b, cin=%b | Half Adder: sum=%b, carry=%b | Full Adder: sum=%b, carry=%b",
+                 a, b, cin, sum_half, carry_half, sum_full, carry_full);
+       	$dumpfile("dump.vcd"); 
+      	$dumpvars;
+
+        a = 0; b = 0; cin = 0; #10;
+        a = 0; b = 1; cin = 0; #10;
+        a = 1; b = 0; cin = 0; #10;
+        a = 1; b = 1; cin = 0; #10;
+        a = 1; b = 1; cin = 1; #10;
+        $finish;
+    end
+endmodule
