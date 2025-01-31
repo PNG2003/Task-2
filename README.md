@@ -99,6 +99,8 @@ Experience in simulating and analyzing circuit behavior.
 Understanding of waveform interpretation to verify circuit functionality.
 
 Logic gates Simulation ![image](https://github.com/user-attachments/assets/96cbabba-d3da-46dd-b723-db9055fbfc95)
+![Multiplxers waveform](https://github.com/user-attachments/assets/598e629d-677c-4d29-b14c-04fccf97b2cd)
+![Adder circuits](https://github.com/user-attachments/assets/07b0a52e-e33e-492a-a986-d5edd7ceaac4)
 
 
 
