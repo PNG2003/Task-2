@@ -1,0 +1,34 @@
+/* Testbench Code for 2:1 and 4:1 Multiplexers/*
+
+module tb_mux();
+    reg a, b, sel;
+    wire y_2to1;
+    reg [3:0] in;
+    reg [1:0] sel_4;
+    wire y_4to1;
+
+    // Instantiate 2:1 MUX
+    mux_2to1 mux2 (.a(a), .b(b), .sel(sel), .y(y_2to1));
+
+    // Instantiate 4:1 MUX
+    mux_4to1 mux4 (.in(in), .sel(sel_4), .y(y_4to1));
+
+    initial begin
+        // Test 2:1 MUX
+        $monitor("2:1 MUX | a=%b, b=%b, sel=%b, y=%b | 4:1 MUX | in=%b, sel=%b, y=%b",
+                 a, b, sel, y_2to1, in, sel_4, y_4to1);
+      	$dumpfile("dump.vcd"); 
+      	$dumpvars;
+
+        // Test for 2:1 MUX
+        a = 0; b = 1; sel = 0; #10;
+        sel = 1; #10;
+
+        // Test for 4:1 MUX
+        in = 4'b1010; sel_4 = 2'b00; #10;
+        sel_4 = 2'b01; #10;
+        sel_4 = 2'b10; #10;
+        sel_4 = 2'b11; #10;
+        $finish;
+    end
+endmodule
