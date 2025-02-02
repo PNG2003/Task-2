@@ -5,7 +5,8 @@ Company: CODTECH IT SOLUTIONS
 ID: CT12DS2941
 Domain:VLSI(Very Large Scale Intergation)
 Duration: December to Feburary 2025
-Mentor:
+Mentor: NEELA SANTHOSH KUMAR HR@codtechitsolutions.com
+8074194666
 
 
 Project Overview: Designing Basic Digital Logic Circuits in Verilog
